@@ -1,0 +1,25 @@
+{
+  "name": "random-mobile-numbers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "test-coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilekyoruk/random-mobile-numbers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dilekyoruk/random-mobile-numbers/issues"
+  },
+  "homepage": "https://github.com/dilekyoruk/random-mobile-numbers#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
