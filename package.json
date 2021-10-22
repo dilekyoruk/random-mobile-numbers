@@ -1,7 +1,7 @@
 {
   "name": "random-mobile-numbers",
   "version": "1.0.0",
-  "description": "",
+  "description": "Creates random mobile phone numbers with a given country id.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
