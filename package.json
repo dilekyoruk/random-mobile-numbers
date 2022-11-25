@@ -1,6 +1,6 @@
 {
-  "name": "random-mobile-numbers",
-  "version": "1.0.0",
+  "name": "random-mobile-numbers-extended",
+  "version": "1.0.1",
   "description": "Creates random mobile phone numbers with a given country id.",
   "main": "index.js",
   "scripts": {
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dilekyoruk/random-mobile-numbers.git"
+    "url": "git+https://github.com/salehasadi/random-mobile-numbers.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dilekyoruk/random-mobile-numbers/issues"
+    "url": "https://github.com/salehasadi/random-mobile-numbers/issues"
   },
-  "homepage": "https://github.com/dilekyoruk/random-mobile-numbers#readme",
+  "homepage": "https://github.com/salehasadi/random-mobile-numbers#readme",
   "devDependencies": {
     "jest": "^27.3.1"
   }
