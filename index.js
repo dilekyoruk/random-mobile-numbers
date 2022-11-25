@@ -12,14 +12,18 @@ function getRandomInt(min, max) {
 
 class PhoneNumberGenerator {
   constructor() {
+    this.includeCountryCode = false;
+    this.startingNumber = null;
     this.countryCode = "";
     this.phoneNumberLength = 0;
   }
 
   generatePhoneNumber() {
-    let phoneNumber = this.countryCode;
-    for (let i = 0; i < this.phoneNumberLength; i++) {
-      phoneNumber += getRandomInt(0, 9);
+    let phoneNumber = this.includeCountryCode ? this.countryCode : null;
+    let phoneNumberLength = this.startingNumber ? this.phoneNumberLength - 1 : this.phoneNumberLength;
+    phoneNumber += this.startingNumber ? this.startingNumber : null;
+    for (let i = 0; i < phoneNumberLength; i++) {
+        phoneNumber += getRandomInt(0, 9);
     }
     return phoneNumber;
   }
@@ -57,8 +61,20 @@ class USAPhoneNumberGenerator extends PhoneNumberGenerator {
   }
 }
 
+class PeruPhoneNumberGenerator extends PhoneNumberGenerator {
+  constructor(
+    includeCountryCode = true,
+    startingNumber = 9
+  ) {
+    super();
+    this.countryCode = "+51";
+    this.phoneNumberLength = 9;
+    this.startingNumber = 9;
+  }
+}
+
 class CountryPhoneNumberGenerator {
-  create(countryId) {
+  create(countryId, includeCountryCode, startingNumber) {
     if (countryId == "DE") {
       return new GermanyPhoneNumberGenerator();
     }
@@ -70,6 +86,11 @@ class CountryPhoneNumberGenerator {
     }
     if (countryId == "USA") {
       return new USAPhoneNumberGenerator();
+    } else {
+      throw Error("Unsupported Country Id");
+    }
+    if (countryId == "PE") {
+      return new PeruPhoneNumberGenerator(includeCountryCode, startingNumber);
     } else {
       throw Error("Unsupported Country Id");
     }
